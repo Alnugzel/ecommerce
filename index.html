@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://academlostorev1.netlify.app/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./main.js" defer></script>
+    <title>Academlo Store</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#home" class="navbar_logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48.92 56.48"
+            class="logo_icon"
+          >
+            <title>Academlo Logo</title>
+
+            <path
+              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+            ></path>
+          </svg>
+          <span>STORE</span>
+        </a>
+
+        <ul class="navbar_list navbar_list_show" id="navbarMenu">
+          <li>
+            <a class="home_link link_active" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="products_link" href="#products">Products</a>
+          </li>
+        </ul>
+
+        <div class="navbar_icons">
+          <i class="bx bx-moon" id="iconThemeMode"></i>
+          <i class="bx bx-cart" id="iconCart">
+            <div class="total_amount_products"><span class="probando">0</span></div>
+          </i>
+          <i class="bx bxs-dashboard handleIconNavbar"></i>
+        </div>
+      </nav>
+
+    </header>
+
+    <main class="container">
+      <section class="first_section" id="home">
+        <div class="first_section_header">
+          <div></div>
+          <div class="first_section_img">
+            <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270450/eCommerce/sweater2_y7yzqs.png", alt="" />
+          </div>
+        </div>
+
+        <div class="first_section_body">
+          <h2 class="first_section_title">New Sweatshirt COLLECTIONS 2022</h2>
+          <p class="first_section_info">
+            Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.
+          </p>
+          <p class="first_section_price">$14.00</p>
+          <a href="#products" class="first_section_btn">Show more</a>
+        </div>
+      </section>
+
+
+      <section class="second_section" id="products">
+        <div class="content_filter">
+          <div class="filter filter_active mixitup-control-active" data-filter="all">
+              <p>Show all</p>
+              <p>Show all products</p>
+          </div>
+
+          <div class="filter" data-filter=".shirt">
+              <p>Shirt</p>
+              <p>7 products</p>
+          </div>
+
+          <div class="filter" data-filter=".hoddie">
+              <p>Hoddie</p>
+              <p>6 products</p>
+          </div>
+
+          <div class="filter" data-filter=".sweater">
+              <p>Sweater</p>
+              <p>5 products</p>
+          </div>
+      </div>
+
+      <div class="products"></div>
+      </section>
+    </main>
+    <section class="cart_section">
+      <div class="cart">
+        <i class="bx bx-x"></i>
+        <div class="cart_products"></div>
+        <div class="cart_total">
+        <div class="cart_total_info">
+        
+        </div>
+          <button class="btn_buy">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="modalProducts"></div>
+    
+
+
+
+    <div class="loading" id="loading">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 48.92 56.48"
+        class="load"
+      >
+        <title>Academlo Logo</title>
+
+        <path
+          d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z"
+        ></path>
+        <path
+          d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+        ></path>
+      </svg>
+    </div>
+
+
+    <footer>
+      <section class="content_footer container">
+          <div class="footer_info">
+              <h3 class="footer_info-title">Our information</h3>
+              <ul>
+                  <li><a href="#">Toluca - México</a></li>
+              </ul>
+          </div>
+
+          <div class="footer_info">
+              <h3 class="footer_info-title">About Us</h3>
+              <ul>
+                  <li><a href="#">Support Center</a></li>
+                  <li><a href="#">Customer Support</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Copy Right</a></li>
+              </ul>
+          </div>
+
+          <div class="footer_info">
+              <h3 class="footer_info-title">Product</h3>
+              <ul>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Sweatshirts</a></li>
+              </ul>
+          </div>
+
+          <div class="footer_info">
+              <h3 class="footer_info-title">Social</h3>
+              <ul class="footer_link-social">
+                  <li>
+                      <a href="#">
+                          <i class="bx bxl-facebook"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <i class="bx bxl-twitter"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <i class="bx bxl-instagram"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </section>
+
+      <p><b>Angel Figuera angelfiguera0889@gmail.com <a href="#">Github</a></b></p>
+  </footer>
+  </body>
+</html>
