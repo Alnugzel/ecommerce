@@ -68,7 +68,7 @@ function modifyLocalStorage(key, value) {
 function themeMode() {
   const iconThemeModeHTML = document.querySelector("#iconThemeMode");
 
-  iconThemeModeHTML.addEventListener("click", function () {
+  iconThemeModeHTML.addEventListener("click", function changeTheme () {
     if (window.document.body.classList.contains("dark_mode")) {
       window.document.body.classList.remove("dark_mode");
       iconThemeModeHTML.classList.remove("bx-sun");
@@ -79,6 +79,11 @@ function themeMode() {
       window.localStorage.setItem("saveTheme", "dark_mode");
     }
   });
+
+        window.localStorage.getItem("saveTheme") ? 
+        (window.document.body.classList.add("dark_mode"),
+        iconThemeModeHTML.classList.add("bx-sun")) : "";
+
 }
 
 async function getData() {
