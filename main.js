@@ -272,7 +272,7 @@ function cartBuy (req) {
 
     for (const product of req.products) {
       const productCart = req.cart[product.id];
-
+      
       if(product.id === productCart?.id) {
         newProducts.push({
           ...product,
@@ -284,7 +284,7 @@ function cartBuy (req) {
     }
     req.products = newProducts;
     req.cart = {};
-
+    confirm("seguro que quieres hacer la compra?")
     modifyLocalStorage("products", req.products);
     modifyLocalStorage("cart", req.cart);
 
